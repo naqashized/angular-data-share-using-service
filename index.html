@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Data sharing between controllers</title>
+  <title>Data sharing between controllers using service</title>
   </head>
   <body ng-app="dataApp">
-  <h1>Data sharing between controllers</h2>
-  <div ng-controller="ParentController">
+  <h1>Data sharing between controllers using service</h1>
   <ng-view></ng-view>
-  </div>
+
    
-     <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-cookies/angular-cookies.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-cookies/angular-cookies.js"></script>
 
     
     
-    <script type="text/javascript" src="./app/app.js"></script>
-    <script type="text/javascript" src="./app/controllers.js"></script>
-    
+  <script type="text/javascript" src="./app/app.js"></script>
+  <script type="text/javascript" src="./app/controllers.js"></script>
+  <script type="text/javascript" src="./app/services.js"></script>
   </body>
 </html>

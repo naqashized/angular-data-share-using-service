@@ -1,21 +1,21 @@
-angular.module('dataApp.main').controller('NameController',function($scope,$location) {
+var module = angular.module('dataApp.main')
+
+module.controller('SubmitNameController',function($scope,$location, dataShareService) {
    
     $scope.name="";
     $scope.submit = function() {
-      console.log("name "+this.name);
-      $scope.name = this.name;
-       $scope.$emit('name', {
-       	name:this.name
-       });
-       $location.path('/name');
+        dataShareService.setName(this.name)
+        $location.path('/name');
     };
-    
+});
 
-  });
-angular.module('dataApp.name').controller('ParentController',function($scope) {
-   
-    $scope.name='no name entered yet.';
-     $scope.$on('name', function(event, data) { $scope.name=data.name; });
-    
+module.controller('ShowNameController',function($scope,dataShareService) {
 
-  });
+    $scope.name='no name received yet.';
+    $scope.$on('name_shared', function() {
+        $scope.name = dataShareService.name;
+
+    });
+
+});
+

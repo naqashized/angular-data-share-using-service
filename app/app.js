@@ -1,8 +1,5 @@
-// var dataApp = angular.module('dataApp', 
-// 		  ['ngRoute']);
-angular.module('dataApp', ['ngCookies', 'ngResource', 'ngRoute','dataApp.main','dataApp.name']);
+angular.module('dataApp', ['ngCookies', 'ngResource', 'ngRoute','dataApp.main']);
 angular.module('dataApp.main', []);
-angular.module('dataApp.name', []);
 angular.module('dataApp').config(['$routeProvider',
     function($routeProvider) {
 	$routeProvider.when('/', {templateUrl: 'partials/main.html'});
